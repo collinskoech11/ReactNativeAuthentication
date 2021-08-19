@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 
  class LoginScreen extends React.Component {
@@ -11,6 +11,9 @@ import { View, Text, StyleSheet, TextInput } from 'react-native';
                 <View
                     style={styles.formWrapper}
                 >
+                    <Text style={styles.welcomeText}>
+                        Welcome Back User
+                    </Text>
                     <View
                          style={styles.formRow}
                     >
@@ -20,7 +23,24 @@ import { View, Text, StyleSheet, TextInput } from 'react-native';
                             placeholderTextColor="#333"
                         />
                     </View>
-                    
+
+                    <View
+                         style={styles.formRow}
+                    >
+                        <TextInput
+                            style={styles.textInput}
+                            placeholder="Enter Password"
+                            placeholderTextColor="#333"
+                            secureTextEntry={true}
+                        />
+                    </View>
+                    <TouchableOpacity
+                        style={styles.signinBtn}
+                    >
+                        <Text
+                            style={styles.signinText}
+                        >Sign In</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         )
@@ -47,6 +67,24 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         borderRadius: 10,
         color: "#333"
+    },
+    welcomeText: {
+        textAlign: "center",
+        marginBottom: 20,
+        fontSize: 24,
+        fontWeight: "bold"
+    },
+    signinBtn: {
+        backgroundColor: "blue",
+        paddingVertical:10,
+        borderRadius: 20,
+        marginTop:10
+    },
+    signinText: {
+        textAlign: "center",
+        color: "#fff",
+        fontSize: 10,
+        fontWeight: "bold"
     }
 })
 
