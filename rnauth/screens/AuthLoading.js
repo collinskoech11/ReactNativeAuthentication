@@ -2,19 +2,20 @@ import React from 'react';
 import { View, Text, StyleSheet, ActivityIndicator  } from 'react-native';
 
 
- class DashboardScreen extends React.Component {
+ class AuthLoading extends React.Component {
     render() {
         return (
             <View
                 style={styles.container}
             >
+                <ActivityIndicator/>
                
             </View>
         )
     }
 }
 
-export default DashboardScreen;
+export default AuthLoading;
 
 const styles = StyleSheet.create({
     container: {
