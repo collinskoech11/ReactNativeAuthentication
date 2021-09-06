@@ -22,3 +22,14 @@ const AfterSignin = createNativeStackNavigator({
     headerMode: "none",
     initialRouteName: "Dashboard"
 })
+
+const AppNavigator = createStackNavigator({
+    Auth: BeforeSignin,
+    App: AfterSignin,
+    AuthLoadingScreen: AuthLoadingScreen
+}, {
+    headerMode: "",
+    initialRouteName: "auth"
+})
+
+export default createAppContainer(AppNavigator);
